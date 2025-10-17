@@ -100,7 +100,7 @@ export default async function Home() {
       {/* Footer */}
       <footer className="relative bg-black border-t border-gray-900 py-8 text-center">
         <p className="text-xs text-gray-500 uppercase tracking-wide">
-          © 2024 Ozwald. All rights reserved.
+          © 2025 Ozwvld. All rights reserved.
         </p>
       </footer>
     </main>
