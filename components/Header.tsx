@@ -9,7 +9,7 @@ export default function Header() {
       <div className="mb-6">
         <Link href="/" className="inline-block">
           <div className="text-white text-2xl font-bold tracking-wider uppercase">
-            OZWVLD
+            O Z W V L D
           </div>
         </Link>
       </div>

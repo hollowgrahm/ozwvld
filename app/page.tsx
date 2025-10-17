@@ -26,7 +26,7 @@ export default async function Home() {
           className="w-full h-full object-cover"
         >
           <source
-            src="https://cdn.shopify.com/videos/c/o/v/d4d2fe9fbbc14c01aaf4c20d447da032.mov"
+            src="https://cdn.shopify.com/videos/c/o/v/42c520b636b64558a48e596d5fc8257b.mp4"
             type="video/mp4"
           />
         </video>
@@ -39,10 +39,10 @@ export default async function Home() {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-wider text-white mb-4">
-              Limited Release
+              create.collection.001
             </h1>
             <p className="text-sm md:text-base text-gray-300 uppercase tracking-wide">
-              Urban Apparel Collection
+              Limited Release Collection
             </p>
           </div>
 
@@ -83,11 +83,11 @@ export default async function Home() {
               <h2 className="text-xl uppercase tracking-wider text-white mb-4">
                 Get in Touch
               </h2>
-              <p className="text-sm text-gray-400 mb-6">
+              {/* <p className="text-sm text-gray-400 mb-6">
                 Questions about this limited release?
-              </p>
+              </p> */}
               <a
-                href="mailto:info@yourbrand.com"
+                href="mailto:ozwvld@gmail.com"
                 className="inline-block bg-accent hover:bg-hover text-white font-bold py-3 px-8 uppercase tracking-wider text-sm transition-colors"
               >
                 Contact Us
