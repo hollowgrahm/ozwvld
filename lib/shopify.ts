@@ -184,6 +184,10 @@ export async function createCart(): Promise<ShopifyCart> {
             }
           }
         }
+        userErrors {
+          field
+          message
+        }
       }
     }
   `;

@@ -14,16 +14,28 @@ export default function AddToCart({ variants, productTitle }: AddToCartProps) {
 
   const handleAddToCart = async () => {
     setIsAdding(true);
+    console.log('🛒 Add to Cart clicked');
+    console.log('Selected variant:', selectedVariant);
 
     try {
       // Get or create cart ID from localStorage
       let cartId = localStorage.getItem('shopify_cart_id');
+      console.log('Existing cart ID:', cartId);
 
       if (!cartId) {
+        console.log('Creating new cart...');
         const createResponse = await fetch('/api/cart/create', {
           method: 'POST',
         });
+        
+        if (!createResponse.ok) {
+          const errorText = await createResponse.text();
+          console.error('Failed to create cart:', createResponse.status, errorText);
+          throw new Error('Failed to create cart');
+        }
+        
         const { cart } = await createResponse.json();
+        console.log('Cart created:', cart);
         cartId = cart.id;
         if (cartId) {
           localStorage.setItem('shopify_cart_id', cartId);
@@ -31,6 +43,7 @@ export default function AddToCart({ variants, productTitle }: AddToCartProps) {
       }
 
       // Add item to cart
+      console.log('Adding item to cart...');
       const addResponse = await fetch('/api/cart/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -41,11 +54,42 @@ export default function AddToCart({ variants, productTitle }: AddToCartProps) {
         }),
       });
 
-      const { cart } = await addResponse.json();
+      if (!addResponse.ok) {
+        const errorText = await addResponse.text();
+        console.error('Failed to add to cart:', addResponse.status, errorText);
+        throw new Error('Failed to add to cart');
+      }
 
-      // Redirect to checkout
+      const { cart } = await addResponse.json();
+      console.log('Item added to cart:', cart);
+      console.log('Cart checkoutUrl:', cart.checkoutUrl);
+
+      // Redirect to CART page (not checkout) so users can add/remove items
+      const shopifyDomain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN;
+      
       if (cart.checkoutUrl) {
-        window.location.href = cart.checkoutUrl;
+        try {
+          // Parse the checkout URL to get the cart ID
+          const url = new URL(cart.checkoutUrl);
+          const pathname = url.pathname; // e.g., /cart/c/XXX
+          const search = url.search; // e.g., ?key=XXX
+          
+          // Build cart VIEW URL (not checkout) with .myshopify.com domain
+          // This shows the cart page where users can modify items before checkout
+          const cartUrl = `https://${shopifyDomain}${pathname}${search}`;
+          
+          console.log('✅ Built cart URL:', cartUrl);
+          console.log('🛒 Redirecting to cart page...');
+          console.log('💡 Users can add/remove items, then click "Checkout"');
+          
+          window.location.href = cartUrl;
+        } catch (e) {
+          console.error('Error building cart URL:', e);
+          throw new Error('Failed to build cart URL');
+        }
+      } else {
+        console.error('No checkout URL returned from cart');
+        throw new Error('No cart URL available');
       }
     } catch (error) {
       console.error('Error adding to cart:', error);

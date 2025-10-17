@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clear Cart</title>
+    <style>
+      body {
+        font-family: monospace;
+        background: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+      .container {
+        padding: 2rem;
+      }
+      button {
+        background: #ff5959;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        margin-top: 1rem;
+      }
+      button:hover {
+        background: #d8cbec;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Clear Cart Storage</h1>
+      <p>This will clear your stored cart ID</p>
+      <button onclick="clearCart()">Clear Cart</button>
+      <p id="result"></p>
+    </div>
+    <script>
+      function clearCart() {
+        localStorage.removeItem("shopify_cart_id");
+        document.getElementById("result").textContent =
+          "✓ Cart cleared! You can close this page.";
+      }
+    </script>
+  </body>
+</html>
