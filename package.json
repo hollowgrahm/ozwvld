@@ -1,11 +1,13 @@
 {
-  "name": "ozwvld",
-  "version": "0.1.0",
+  "name": "urban-apparel-storefront",
+  "version": "1.0.0",
+  "description": "Minimal Shopify storefront for urban apparel limited release",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "react": "19.1.0",
@@ -19,5 +21,14 @@
     "@types/react-dom": "^19",
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4"
-  }
+  },
+  "keywords": [
+    "shopify",
+    "nextjs",
+    "ecommerce",
+    "storefront",
+    "urban-apparel"
+  ],
+  "author": "",
+  "license": "ISC"
 }

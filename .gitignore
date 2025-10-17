@@ -30,8 +30,10 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files (committed .env.local with placeholder values)
+# Remove .env.local from tracking once you add real credentials
+# .env.local
+.env*.local
 
 # vercel
 .vercel
