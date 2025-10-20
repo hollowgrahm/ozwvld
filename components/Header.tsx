@@ -1,8 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import { useCart } from '@/lib/cart-context';
 
 export default function Header() {
+  const { itemCount, openCart } = useCart();
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center pt-8 pb-4">
       {/* Logo */}
@@ -28,6 +31,34 @@ export default function Header() {
         >
           Contact
         </Link>
+        
+        {/* Cart Icon */}
+        <button
+          onClick={openCart}
+          className="relative text-accent hover:text-hover transition-colors"
+          aria-label="Open cart"
+        >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+            />
+          </svg>
+          
+          {/* Item Counter */}
+          {itemCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-accent text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+              {itemCount}
+            </span>
+          )}
+        </button>
       </nav>
     </header>
   );

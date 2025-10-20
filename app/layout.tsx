@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inconsolata } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import { CartProvider } from "@/lib/cart-context";
+import CartDrawer from "@/components/CartDrawer";
 
 const inconsolata = Inconsolata({
   subsets: ["latin"],
@@ -22,8 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inconsolata.variable} antialiased`}>
-        <Header />
-        {children}
+        <CartProvider>
+          <Header />
+          {children}
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );

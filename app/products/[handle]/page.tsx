@@ -112,6 +112,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <AddToCart
                 variants={product.variants.edges}
                 productTitle={product.title}
+                productImage={product.images.edges[0]?.node.url}
               />
 
               {/* Additional Info */}
