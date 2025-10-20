@@ -70,9 +70,11 @@ export default async function Home() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pb-20">
+            <div className="flex flex-wrap justify-center gap-8 pb-20">
               {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <div key={product.id} className="w-full sm:w-[350px] lg:w-[300px] xl:w-[280px] flex-shrink-0">
+                  <ProductCard product={product} />
+                </div>
               ))}
             </div>
           )}
