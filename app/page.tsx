@@ -79,21 +79,21 @@ export default async function Home() {
               ))}
             </div>
           )}
-
-          {/* Email Signup Section */}
-          <div id="signup" className="py-20 flex justify-center">
-            <div className="bg-dark-gray px-8 py-6 border border-gray-800">
-              <EmailSignup />
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="relative bg-black border-t border-gray-900 py-8 text-center">
-        <p className="text-xs text-gray-500 uppercase tracking-wide">
-          © 2025 Ozwvld. All rights reserved.
-        </p>
+      <footer id="signup" className="relative bg-black border-t border-gray-900">
+        <div className="px-4 sm:px-6 lg:px-8 py-8">
+          <div className="max-w-7xl mx-auto flex justify-center">
+            <div className="w-full sm:max-w-[732px] lg:max-w-[964px] xl:max-w-[904px] flex flex-col sm:flex-row items-center justify-between gap-6">
+              <p className="text-xs text-gray-500 uppercase tracking-wide">
+                © 2025 Ozwvld. All rights reserved.
+              </p>
+              <EmailSignup />
+            </div>
+          </div>
+        </div>
       </footer>
     </main>
   );

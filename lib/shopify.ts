@@ -263,3 +263,45 @@ export async function addToCart(
   return data.cartLinesAdd.cart;
 }
 
+// Get a page by handle
+export async function getPageByHandle(handle: string) {
+  const query = `
+    query GetPage($handle: String!) {
+      page(handle: $handle) {
+        id
+        title
+        body
+        bodySummary
+        seo {
+          title
+          description
+        }
+      }
+    }
+  `;
+
+  const { data, errors } = await shopifyFetch<{
+    page: {
+      id: string;
+      title: string;
+      body: string;
+      bodySummary: string;
+      seo: {
+        title: string | null;
+        description: string | null;
+      };
+    } | null;
+  }>({ query, variables: { handle } });
+
+  if (errors) {
+    console.error('Shopify GraphQL errors when fetching page:', JSON.stringify(errors, null, 2));
+    return null;
+  }
+
+  if (!data.page) {
+    console.error(`Page with handle "${handle}" not found in Shopify`);
+  }
+
+  return data.page;
+}
+

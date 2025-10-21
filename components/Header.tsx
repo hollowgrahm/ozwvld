@@ -24,6 +24,12 @@ export default function Header() {
           Shop
         </Link>
         <Link
+          href="/about"
+          className="text-[10px] uppercase tracking-wider text-accent hover:text-hover transition-colors"
+        >
+          About
+        </Link>
+        <Link
           href="/#signup"
           className="text-[10px] uppercase tracking-wider text-accent hover:text-hover transition-colors"
         >
