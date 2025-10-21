@@ -40,7 +40,7 @@ export default async function Home() {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold tracking-wider text-white mb-4">
-              create.collection.001
+              create.001
             </h1>
             <p className="text-sm md:text-base text-gray-300 tracking-wide">
               Limited Release Collection
@@ -83,7 +83,7 @@ export default async function Home() {
       </div>
 
       {/* Footer */}
-      <footer id="signup" className="relative bg-black border-t border-gray-900">
+      <footer id="signup" className="relative bg-black/69 border-t border-gray-900">
         <div className="px-4 sm:px-6 lg:px-8 py-8">
           <div className="max-w-7xl mx-auto flex justify-center">
             <div className="w-full sm:max-w-[732px] lg:max-w-[964px] xl:max-w-[904px] flex flex-col sm:flex-row items-center justify-between gap-6">

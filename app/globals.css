@@ -4,7 +4,7 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --accent: #ff5959;
+  --accent: #C85A17;
   --hover: #d8cbec;
   --dark-gray: #171717;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ff5959;
+  background-color: #C85A17;
   border-radius: 0px;
 }
 
@@ -45,5 +45,5 @@ body {
 /* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #ff5959 #ffffff;
+  scrollbar-color: #C85A17 #ffffff;
 }
