@@ -29,6 +29,12 @@ export default function Header() {
         >
           About
         </Link>
+        <Link
+          href="/playground"
+          className="text-[10px] uppercase tracking-wider text-accent hover:text-hover transition-colors"
+        >
+          Playground
+        </Link>
         
         {/* Cart Icon */}
         <button
