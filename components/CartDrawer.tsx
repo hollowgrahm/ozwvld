@@ -139,7 +139,7 @@ export default function CartDrawer() {
                 onClick={closeCart}
                 className="mt-4 text-accent hover:text-hover text-sm tracking-wide transition-colors"
               >
-                Continue Shopping
+                continue shopping
               </button>
             </div>
           ) : (
@@ -230,9 +230,9 @@ export default function CartDrawer() {
             <button
               onClick={handleCheckout}
               disabled={isCheckingOut}
-              className="w-full bg-accent hover:bg-hover text-white font-bold py-4 px-8 tracking-wider text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-accent text-white font-bold py-4 px-8 tracking-wider text-sm transition-opacity opacity-69 hover:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isCheckingOut ? 'Processing...' : 'Checkout'}
+              {isCheckingOut ? 'processing...' : 'checkout'}
             </button>
 
             {/* Continue Shopping */}
@@ -240,7 +240,7 @@ export default function CartDrawer() {
               onClick={closeCart}
               className="w-full text-gray-400 hover:text-white text-sm tracking-wide transition-colors"
             >
-              Continue Shopping
+              continue shopping
             </button>
           </div>
         )}

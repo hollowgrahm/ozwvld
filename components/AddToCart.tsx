@@ -77,9 +77,9 @@ export default function AddToCart({ variants, productTitle, productImage }: AddT
       {/* Add to Cart Button */}
       <button
         onClick={handleAddToCart}
-        className="w-full bg-accent hover:bg-hover text-white font-bold py-4 px-8 tracking-wider text-sm transition-colors"
+        className="w-full bg-accent text-white font-bold py-4 px-8 tracking-wider text-sm transition-opacity opacity-69 hover:opacity-100"
       >
-        Add to Cart
+        add to cart
       </button>
 
       <p className="text-xs text-gray-500 text-center">

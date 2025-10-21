@@ -12,8 +12,8 @@ const inconsolata = Inconsolata({
 });
 
 export const metadata: Metadata = {
-  title: "OZWVLD - Limited Release",
-  description: "Limited release urban apparel collection",
+  title: "OZWVLD",
+  description: "urban apparel collection",
 };
 
 export default function RootLayout({

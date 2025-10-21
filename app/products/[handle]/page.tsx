@@ -41,7 +41,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           {/* Back Button */}
           <Link
             href="/"
-            className="inline-flex items-center text-xs uppercase tracking-wide text-accent hover:text-hover transition-colors mb-8"
+            className="inline-flex items-center text-xs tracking-wide text-accent hover:text-hover transition-colors mb-8"
           >
             <svg
               className="w-4 h-4 mr-2"
@@ -88,7 +88,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             {/* Product Info */}
             <div className="lg:sticky lg:top-32 h-fit">
-              <h1 className="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold tracking-wider text-white mb-4">
                 {product.title}
               </h1>
 
@@ -99,9 +99,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
               {/* Description */}
               {product.description && (
                 <div className="mb-8">
-                  <h2 className="text-sm uppercase tracking-wide text-gray-400 mb-3">
-                    Description
-                  </h2>
                   <div className="text-sm text-gray-300 leading-relaxed">
                     {product.description}
                   </div>
@@ -114,26 +111,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 productTitle={product.title}
                 productImage={product.images.edges[0]?.node.url}
               />
-
-              {/* Additional Info */}
-              <div className="mt-8 pt-8 border-t border-gray-800 space-y-4">
-                <div>
-                  <h3 className="text-xs uppercase tracking-wide text-gray-400 mb-2">
-                    Limited Release
-                  </h3>
-                  <p className="text-xs text-gray-500">
-                    This is a limited edition item. Once it's gone, it's gone.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xs uppercase tracking-wide text-gray-400 mb-2">
-                    Shipping
-                  </h3>
-                  <p className="text-xs text-gray-500">
-                    Orders typically ship within 2-3 business days.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
