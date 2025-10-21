@@ -37,7 +37,7 @@ export default function AddToCart({ variants, productTitle, productImage }: AddT
 
   if (availableVariants.length === 0) {
     return (
-      <div className="mt-8 p-4 bg-dark-gray text-gray-400 text-sm uppercase tracking-wide text-center">
+      <div className="mt-8 p-4 bg-dark-gray text-gray-400 text-sm tracking-wide text-center">
         Out of Stock
       </div>
     );
@@ -48,13 +48,13 @@ export default function AddToCart({ variants, productTitle, productImage }: AddT
       {/* Variant Selection */}
       {variants.length > 1 && (
         <div className="space-y-2">
-          <label className="text-xs uppercase tracking-wide text-gray-400">
+          <label className="text-xs tracking-wide text-gray-400">
             Select Variant
           </label>
           <select
             value={selectedVariantId}
             onChange={(e) => setSelectedVariantId(e.target.value)}
-            className="w-full bg-dark-gray text-white border border-gray-800 p-3 text-sm uppercase tracking-wide focus:border-accent outline-none"
+            className="w-full bg-dark-gray text-white border border-gray-800 p-3 text-sm tracking-wide focus:border-accent outline-none"
           >
             {variants.map(({ node: variant }) => (
               <option
@@ -77,7 +77,7 @@ export default function AddToCart({ variants, productTitle, productImage }: AddT
       {/* Add to Cart Button */}
       <button
         onClick={handleAddToCart}
-        className="w-full bg-accent hover:bg-hover text-white font-bold py-4 px-8 uppercase tracking-wider text-sm transition-colors"
+        className="w-full bg-accent hover:bg-hover text-white font-bold py-4 px-8 tracking-wider text-sm transition-colors"
       >
         Add to Cart
       </button>

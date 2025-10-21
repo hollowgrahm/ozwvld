@@ -33,7 +33,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         {/* Product Info */}
         <div className="space-y-2">
-          <h3 className="text-sm uppercase tracking-wide text-white group-hover:text-accent transition-colors">
+          <h3 className="text-sm tracking-wide text-white group-hover:text-accent transition-colors">
             {product.title}
           </h3>
           <p className="text-xs text-gray-400">

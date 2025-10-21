@@ -103,7 +103,7 @@ export default function CartDrawer() {
         {/* Header */}
         <div className="p-6 border-b border-gray-800">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl uppercase tracking-wider text-white font-bold">
+            <h2 className="text-xl tracking-wider text-white font-bold">
               Cart ({itemCount})
             </h2>
             <button
@@ -132,12 +132,12 @@ export default function CartDrawer() {
         <div className="flex-1 overflow-y-auto p-6">
           {items.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-gray-400 text-sm uppercase tracking-wide">
+              <p className="text-gray-400 text-sm tracking-wide">
                 Your cart is empty
               </p>
               <button
                 onClick={closeCart}
-                className="mt-4 text-accent hover:text-hover text-sm uppercase tracking-wide transition-colors"
+                className="mt-4 text-accent hover:text-hover text-sm tracking-wide transition-colors"
               >
                 Continue Shopping
               </button>
@@ -165,7 +165,7 @@ export default function CartDrawer() {
                   {/* Product Info */}
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-white text-sm uppercase tracking-wide">
+                      <h3 className="text-white text-sm tracking-wide">
                         {item.productTitle}
                       </h3>
                       {item.variantTitle !== 'Default Title' && (
@@ -203,7 +203,7 @@ export default function CartDrawer() {
                       </button>
                       <button
                         onClick={() => removeItem(item.variantId)}
-                        className="ml-auto text-gray-400 hover:text-accent text-xs uppercase tracking-wide transition-colors"
+                        className="ml-auto text-gray-400 hover:text-accent text-xs tracking-wide transition-colors"
                       >
                         Remove
                       </button>
@@ -220,7 +220,7 @@ export default function CartDrawer() {
           <div className="p-6 border-t border-gray-800 space-y-4">
             {/* Total */}
             <div className="flex items-center justify-between text-white">
-              <span className="text-sm uppercase tracking-wide">Total:</span>
+              <span className="text-sm tracking-wide">Total:</span>
               <span className="text-xl font-bold">
                 ${totalPrice.toFixed(2)}
               </span>
@@ -230,7 +230,7 @@ export default function CartDrawer() {
             <button
               onClick={handleCheckout}
               disabled={isCheckingOut}
-              className="w-full bg-accent hover:bg-hover text-white font-bold py-4 px-8 uppercase tracking-wider text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-accent hover:bg-hover text-white font-bold py-4 px-8 tracking-wider text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isCheckingOut ? 'Processing...' : 'Checkout'}
             </button>
@@ -238,7 +238,7 @@ export default function CartDrawer() {
             {/* Continue Shopping */}
             <button
               onClick={closeCart}
-              className="w-full text-gray-400 hover:text-white text-sm uppercase tracking-wide transition-colors"
+              className="w-full text-gray-400 hover:text-white text-sm tracking-wide transition-colors"
             >
               Continue Shopping
             </button>

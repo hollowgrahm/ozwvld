@@ -39,10 +39,10 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-wider text-white mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-wider text-white mb-4">
               create.collection.001
             </h1>
-            <p className="text-sm md:text-base text-gray-300 uppercase tracking-wide">
+            <p className="text-sm md:text-base text-gray-300 tracking-wide">
               Limited Release Collection
             </p>
           </div>
@@ -51,7 +51,7 @@ export default async function Home() {
           {error ? (
             <div className="text-center py-20">
               <div className="bg-dark-gray p-8 inline-block">
-                <p className="text-accent text-sm uppercase tracking-wide mb-4">
+                <p className="text-accent text-sm tracking-wide mb-4">
                   Unable to load products
                 </p>
                 <p className="text-gray-400 text-xs">
@@ -62,7 +62,7 @@ export default async function Home() {
           ) : products.length === 0 ? (
             <div className="text-center py-20">
               <div className="bg-dark-gray p-8 inline-block">
-                <p className="text-white text-sm uppercase tracking-wide mb-4">
+                <p className="text-white text-sm tracking-wide mb-4">
                   No products available yet
                 </p>
                 <p className="text-gray-400 text-xs">
@@ -87,7 +87,7 @@ export default async function Home() {
         <div className="px-4 sm:px-6 lg:px-8 py-8">
           <div className="max-w-7xl mx-auto flex justify-center">
             <div className="w-full sm:max-w-[732px] lg:max-w-[964px] xl:max-w-[904px] flex flex-col sm:flex-row items-center justify-between gap-6">
-              <p className="text-xs text-gray-500 uppercase tracking-wide">
+              <p className="text-xs text-gray-500 tracking-wide">
                 © 2025 Ozwvld. All rights reserved.
               </p>
               <EmailSignup />

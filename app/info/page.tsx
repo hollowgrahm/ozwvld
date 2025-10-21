@@ -48,13 +48,13 @@ export default async function InfoPage() {
       {/* Content */}
       <div className="relative pt-32 px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-wider text-white mb-12 text-center lowercase">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-wider text-white mb-12 text-center">
             {page.title}
           </h1>
           
           <div 
             className="prose prose-invert prose-sm sm:prose-base max-w-none
-              prose-headings:uppercase prose-headings:tracking-wider prose-headings:text-white
+              prose-headings:tracking-wider prose-headings:text-white
               prose-p:text-gray-300 prose-p:leading-relaxed
               prose-a:text-accent prose-a:no-underline hover:prose-a:text-hover
               prose-strong:text-white prose-strong:font-bold

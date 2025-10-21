@@ -33,7 +33,7 @@ export default function EmailSignup() {
 
   if (status === 'success') {
     return (
-      <div className="text-green-400 text-xs uppercase tracking-wider">
+      <div className="text-green-400 text-xs tracking-wider">
         ✓ Subscribed
       </div>
     );
@@ -54,7 +54,7 @@ export default function EmailSignup() {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="text-accent hover:text-hover text-xs uppercase tracking-wider transition-colors disabled:opacity-50"
+        className="text-accent hover:text-hover text-xs tracking-wider transition-colors disabled:opacity-50"
       >
         {status === 'loading' ? '...' : status === 'error' ? 'retry' : 'join →'}
       </button>

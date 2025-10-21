@@ -24,6 +24,7 @@ body {
   font-family: 'Inconsolata', monospace;
   min-height: 100vh;
   overflow-x: hidden;
+  text-transform: lowercase;
 }
 
 /* Custom scrollbar styling */
