@@ -11,9 +11,7 @@ export default function Header() {
       {/* Logo */}
       <div className="mb-6">
         <Link href="/" className="inline-block">
-          <div className="text-white text-2xl font-bold tracking-wider uppercase">
-            O Z W V L D
-          </div>
+          <img src="/logo.png" alt="O Z W V L D" className="w-60 h-8" />
         </Link>
       </div>
 
@@ -26,10 +24,10 @@ export default function Header() {
           Shop
         </Link>
         <Link
-          href="/#contact"
+          href="/#signup"
           className="text-[10px] uppercase tracking-wider text-accent hover:text-hover transition-colors"
         >
-          Contact
+          Join List
         </Link>
         
         {/* Cart Icon */}

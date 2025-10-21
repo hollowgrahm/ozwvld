@@ -1,5 +1,6 @@
 import { getAllProducts } from '@/lib/shopify';
 import ProductCard from '@/components/ProductCard';
+import EmailSignup from '@/components/EmailSignup';
 
 export const revalidate = 60; // Revalidate every 60 seconds
 
@@ -79,21 +80,10 @@ export default async function Home() {
             </div>
           )}
 
-          {/* Contact Section */}
-          <div id="contact" className="py-20 text-center">
-            <div className="bg-dark-gray p-8 max-w-md mx-auto">
-              <h2 className="text-xl uppercase tracking-wider text-white mb-4">
-                Get in Touch
-              </h2>
-              {/* <p className="text-sm text-gray-400 mb-6">
-                Questions about this limited release?
-              </p> */}
-              <a
-                href="mailto:ozwvld@gmail.com"
-                className="inline-block bg-accent hover:bg-hover text-white font-bold py-3 px-8 uppercase tracking-wider text-sm transition-colors"
-              >
-                Contact Us
-              </a>
+          {/* Email Signup Section */}
+          <div id="signup" className="py-20 flex justify-center">
+            <div className="bg-dark-gray px-8 py-6 border border-gray-800">
+              <EmailSignup />
             </div>
           </div>
         </div>
