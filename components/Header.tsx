@@ -29,12 +29,6 @@ export default function Header() {
         >
           About
         </Link>
-        <Link
-          href="/#signup"
-          className="text-[10px] uppercase tracking-wider text-accent hover:text-hover transition-colors"
-        >
-          Join List
-        </Link>
         
         {/* Cart Icon */}
         <button
