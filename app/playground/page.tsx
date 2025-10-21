@@ -27,7 +27,7 @@ export default async function PlaygroundPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-[#232220]">
       {/* Video Background */}
       <div className="fixed inset-0 -z-10">
         <video
