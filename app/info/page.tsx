@@ -48,7 +48,7 @@ export default async function InfoPage() {
       {/* Content */}
       <div className="relative pt-32 px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white mb-12 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-wider text-white mb-12 text-center lowercase">
             {page.title}
           </h1>
           
