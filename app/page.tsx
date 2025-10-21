@@ -43,7 +43,7 @@ export default async function Home() {
               create.001
             </h1>
             <p className="text-sm md:text-base text-gray-300 tracking-wide">
-              Limited Release Collection
+              location / growth / observation
             </p>
           </div>
 

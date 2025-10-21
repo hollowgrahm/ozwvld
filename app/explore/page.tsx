@@ -5,11 +5,11 @@ import type { Metadata } from 'next';
 export const revalidate = 60;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const page = await getPageByHandle('playground');
+  const page = await getPageByHandle('explore');
 
   if (!page) {
     return {
-      title: 'Playground - OZWVLD',
+      title: 'explore - ozwvld',
     };
   }
 
@@ -19,8 +19,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function PlaygroundPage() {
-  const page = await getPageByHandle('playground');
+export default async function ExplorePage() {
+  const page = await getPageByHandle('explore');
 
   if (!page) {
     notFound();

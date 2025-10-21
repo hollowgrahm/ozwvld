@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Inconsolata } from "next/font/google";
+import { Atkinson_Hyperlegible } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { CartProvider } from "@/lib/cart-context";
 import CartDrawer from "@/components/CartDrawer";
 
-const inconsolata = Inconsolata({
+const atkinson = Atkinson_Hyperlegible({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-inconsolata",
+  variable: "--font-atkinson",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inconsolata.variable} antialiased`}>
+      <body className={`${atkinson.variable} antialiased`}>
         <CartProvider>
           <Header />
           {children}

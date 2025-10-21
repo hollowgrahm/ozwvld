@@ -19,15 +19,21 @@ export default function Header() {
       <nav className="flex items-center justify-center gap-6">
         <Link
           href="/info"
-          className="text-[10px] tracking-wider text-accent hover:text-hover transition-colors"
+          className="text-sm tracking-wider text-accent hover:text-hover transition-colors"
         >
           info
         </Link>
         <Link
-          href="/playground"
-          className="text-[10px] tracking-wider text-accent hover:text-hover transition-colors"
+          href="/explore"
+          className="text-sm tracking-wider text-accent hover:text-hover transition-colors"
         >
-          playground
+          explore
+        </Link>
+        <Link
+          href="/create-001"
+          className="text-sm tracking-wider text-accent hover:text-hover transition-colors"
+        >
+          create.001
         </Link>
         
         {/* Cart Icon */}
