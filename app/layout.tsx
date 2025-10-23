@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { CartProvider } from "@/lib/cart-context";
 import CartDrawer from "@/components/CartDrawer";
+import ProtectionScript from "@/components/ProtectionScript";
 
 const atkinson = Atkinson_Hyperlegible({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${atkinson.variable} antialiased`}>
+        <ProtectionScript />
         <CartProvider>
           <Header />
           {children}

@@ -25,6 +25,10 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   text-transform: lowercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Custom scrollbar styling */
@@ -46,4 +50,19 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: #C85A17 #ffffff;
+}
+
+/* Disable image dragging */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* Re-enable pointer events for interactive images */
+img[alt*="logo"], img[alt*="Logo"] {
+  pointer-events: auto;
 }

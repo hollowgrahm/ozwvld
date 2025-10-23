@@ -42,7 +42,7 @@ export default async function Home() {
             <h1 className="text-4xl md:text-6xl font-bold tracking-wider text-white mb-4">
               create.001
             </h1>
-            <p className="text-sm md:text-base text-gray-300 tracking-wide">
+            <p className="text-sm md:text-base text-gray-400 tracking-wide">
               location / growth / observation
             </p>
           </div>

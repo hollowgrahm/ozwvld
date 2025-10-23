@@ -18,6 +18,12 @@ export default function Header() {
       {/* Navigation */}
       <nav className="flex items-center justify-center gap-6">
         <Link
+          href="/"
+          className="text-sm tracking-wider text-accent hover:text-hover transition-colors"
+        >
+          home
+        </Link>
+        <Link
           href="/create-001"
           className="text-sm tracking-wider text-accent hover:text-hover transition-colors"
         >

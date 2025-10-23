@@ -48,7 +48,7 @@ export default function EmailSignup() {
         placeholder="email"
         required
         disabled={status === 'loading'}
-        className="bg-transparent text-white border-b-2 border-gray-500 px-0 py-1 text-xs focus:border-accent outline-none disabled:opacity-50 placeholder:text-gray-400 w-48"
+        className="bg-transparent text-gray-400 border-b-2 border-gray-500 px-0 py-1 text-xs focus:border-accent outline-none disabled:opacity-50 placeholder:text-gray-400 w-48"
       />
       
       <button
