@@ -27,7 +27,7 @@ export default async function Home() {
           className="w-full h-full object-cover"
         >
           <source
-            src="https://cdn.shopify.com/videos/c/o/v/42c520b636b64558a48e596d5fc8257b.mp4"
+            src="https://cdn.shopify.com/videos/c/o/v/82b20aed46f747c989839ea264b64cf2.mp4"
             type="video/mp4"
           />
         </video>
@@ -83,7 +83,7 @@ export default async function Home() {
       </div>
 
       {/* Footer */}
-      <footer id="signup" className="relative bg-black/69 border-t border-gray-900">
+      <footer id="signup" className="fixed bottom-0 left-0 right-0 bg-black/69 border-t border-gray-900 z-10">
         <div className="px-4 sm:px-6 lg:px-8 py-8">
           <div className="max-w-7xl mx-auto flex justify-center">
             <div className="w-full sm:max-w-[732px] lg:max-w-[964px] xl:max-w-[904px] flex flex-col sm:flex-row items-center justify-between gap-6">
