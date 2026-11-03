@@ -24,6 +24,12 @@ export default function Header() {
           home
         </Link>
         <Link
+          href="/from-a-distance"
+          className="text-sm tracking-wider text-accent hover:text-hover transition-colors"
+        >
+          from a distance
+        </Link>
+        <Link
           href="/bv-pl-oz-26"
           className="text-sm tracking-wider text-accent hover:text-hover transition-colors"
         >
@@ -47,7 +53,7 @@ export default function Header() {
         >
           explore
         </Link>
-        
+
         {/* Cart Icon */}
         <button
           onClick={openCart}
